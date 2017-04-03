@@ -1,5 +1,5 @@
 angular.module('angularfireStarterApp')
-  .factory('Users', function($firebaseArray, $firebaseObject){
+  .factory('Users', ['$firebaseArray', '$firebaseObject', function($firebaseArray, $firebaseObject){
     var usersRef = firebase.database().ref('users');
     var users = $firebaseArray(usersRef);
 
@@ -17,4 +17,4 @@ angular.module('angularfireStarterApp')
     };
 
     return Users;
-  });
+  }]);

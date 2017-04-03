@@ -1,5 +1,5 @@
 angular.module('angularfireStarterApp')
-  .controller('ProfileCtrl', function($state, md5, Auth, profile, Users){
+  .controller('ProfileCtrl', ['$state', 'md5', 'Auth', 'profile', 'Users', function($state, md5, Auth, profile, Users){
     var profileCtrl = this;
     profileCtrl.profile = profile;
     profileCtrl.users = Users.all;
@@ -16,4 +16,4 @@ angular.module('angularfireStarterApp')
         });
       };
 
-  });
+  }]);

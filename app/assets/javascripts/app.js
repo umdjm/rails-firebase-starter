@@ -6,7 +6,7 @@ angular
         'angular-md5',
         'ui.router'
     ])
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
@@ -66,7 +66,7 @@ angular
             });
 
         $urlRouterProvider.otherwise('/');
-    })
+    }])
     .config(function(){
         var config = {
             apiKey: "AIzaSyCIeDwx6RcPyxoNZ3Z6tfHERrgpn9fK-Bs",

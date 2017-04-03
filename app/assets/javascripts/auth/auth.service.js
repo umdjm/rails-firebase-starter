@@ -1,6 +1,7 @@
 angular.module('angularfireStarterApp')
-  .factory('Auth', function($firebaseAuth){
+
+  .factory('Auth', ['$firebaseAuth', function($firebaseAuth){
     var auth = $firebaseAuth();
 
     return auth;
-  });
+  }]);
