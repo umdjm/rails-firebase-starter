@@ -10,7 +10,7 @@ angular
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'assets/home/home.html',
+                templateUrl: 'home/home.html',
                 requireNoAuth: function($state, Auth){
                     return Auth.$requireSignIn().then(function(auth){
                         $state.go('profile');
@@ -22,7 +22,7 @@ angular
             .state('login', {
                 url: '/login',
                 controller: 'AuthCtrl as authCtrl',
-                templateUrl: 'assets/auth/login.html',
+                templateUrl: 'auth/login.html',
                 resolve: {
                     requireNoAuth: function($state, Auth){
                         return Auth.$requireSignIn().then(function(auth){
@@ -36,7 +36,7 @@ angular
             .state('register', {
                 url: '/register',
                 controller: 'AuthCtrl as authCtrl',
-                templateUrl: 'assets/auth/register.html',
+                templateUrl: 'auth/register.html',
                 resolve: {
                     requireNoAuth: function($state, Auth){
                         return Auth.$requireSignIn().then(function(auth){
@@ -50,7 +50,7 @@ angular
             .state('profile', {
                 url: '/profile',
                 controller: 'ProfileCtrl as profileCtrl',
-                templateUrl: 'assets/users/profile.html',
+                templateUrl: 'users/profile.html',
                 resolve: {
                     auth: function($state, Users, Auth){
                         return Auth.$requireSignIn().catch(function(){

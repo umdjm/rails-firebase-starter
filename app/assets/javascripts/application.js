@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require angular
 //= require firebase
-//= require app
 // = require_tree .
